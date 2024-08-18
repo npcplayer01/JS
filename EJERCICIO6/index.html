@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>EJERCICIO 6</title>
+    <script src="descuentos.js"></script>
+</head>
+<body>
+    <h1>Calcula el descuento de tu viaje</h1>
+
+    <label for="origen">Origen:</label>
+    <select id="origen"> 
+        <option value="Palma">Palma</option>
+        <option value="Otra Ciudad">Otra Ciudad</option> 
+    </select>
+
+    <label for="destino">Destino:</label>
+    <select id="destino">
+        <option value="La Costa del Sol">La Costa del Sol</option>
+        <option value="Panchimalco">Panchimalco</option>
+        <option value="Puerto el Triunfo">Puerto el Triunfo</option>
+        <option value="Otro Destino">Otro Destino</option> 
+    </select>
+
+    <label for="precio">Precio del viaje:</label>
+    <input type="number" id="precio" min="0" step="0.01">
+
+    <button onclick="mostrarResultado()">Calcular descuento</button>
+
+    <div id="resultado"></div>
+
+</body>
+</html>
