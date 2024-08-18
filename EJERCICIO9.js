@@ -1,8 +1,9 @@
-function convertirTemperatura() {
-    const celsius = parseFloat(prompt("Ingrese la temperatura en grados Celsius:"));
+const readlineSync = require('readline-sync'); 
 
+function convertirTemperatura() {
+    const celsius = parseFloat(readlineSync.question("Ingrese la temperatura en grados Celsius: ")); 
     if (isNaN(celsius)) {
-        alert("Por favor, ingrese un valor numérico válido.");
+        console.log("Por favor, ingrese un valor numérico válido.");
         return;
     }
 
