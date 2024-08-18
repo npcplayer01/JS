@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es-sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <script src="promedio.js"></script>
+    <title>Ejercicio 10</title>
+</head>
+<body>
+    <div class="container"> 
+        <h1>Ingresa las edades de los estudiantes</h1>
+
+        <div class="turno">
+            <h2>Turno Mañana (5 estudiantes)</h2>
+            <div id="edades-manana"></div>
+        </div>
+
+        <div class="turno">
+            <h2>Turno Tarde (6 estudiantes)</h2>
+            <div id="edades-tarde"></div>
+        </div>
+
+        <div class="turno">
+            <h2>Turno Noche (11 estudiantes)</h2>
+            <div id="edades-noche"></div>
+        </div>
+
+        <button onclick="calcularPromedios()">Calcular Promedios</button>
+
+        <div id="resultado"></div>
+    </div>
+
+    <script src="promedios.js"></script>
+</body>
+</html>

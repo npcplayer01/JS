@@ -1,26 +1,16 @@
-function convertirTemperatura() {
-    const celsius = parseFloat(prompt("Ingrese la temperatura en grados Celsius:"));
+function mostrarTablaMultiplicar() {
+    const numero = parseInt(prompt("Ingrese un número del 1 al 10:"));
 
-    if (isNaN(celsius)) {
-        alert("Por favor, ingrese un valor numérico válido.");
-        return;
+    if (isNaN(numero) || numero < 1 || numero > 10) {
+        console.error("Por favor, ingrese un número válido entre 1 y 10.");
+        return; 
     }
 
-    const fahrenheit = (celsius * 9/5) + 32;
-    let mensaje;
-
-    if (fahrenheit >= 14 && fahrenheit < 32) {
-        mensaje = "Temperatura baja";
-    } else if (fahrenheit >= 32 && fahrenheit < 68) {
-        mensaje = "Temperatura adecuada";
-    } else if (fahrenheit >= 68 && fahrenheit < 96) {
-        mensaje = "Temperatura alta";
-    } else {
-        mensaje = "Temperatura desconocida";
+    console.log(`Tabla de multiplicar del ${numero}:`);
+    for (let i = 1; i <= 10; i++) {
+        const resultado = numero * i;
+        console.log(`${numero} x ${i} = ${resultado}`);
     }
-
-    console.log(`Temperatura en Fahrenheit: ${fahrenheit.toFixed(2)}°F`);
-    console.log(mensaje);
 }
 
-convertirTemperatura();
+mostrarTablaMultiplicar(); 
