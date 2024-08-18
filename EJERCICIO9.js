@@ -1,12 +1,21 @@
-const readlineSync = require('readline-sync'); 
+const inquirer = require('inquirer');
 
-function convertirTemperatura() {
-    const celsius = parseFloat(readlineSync.question("Ingrese la temperatura en grados Celsius: ")); 
-    if (isNaN(celsius)) {
-        console.log("Por favor, ingrese un valor numérico válido.");
-        return;
-    }
+async function convertirTemperatura() {
+    const answers = await inquirer.prompt([
+        {
+            type: 'input',
+            name: 'celsius',
+            message: 'Ingrese la temperatura en grados Celsius:',
+            validate: (input) => {
+                if (isNaN(parseFloat(input))) {
+                    return 'Por favor, ingrese un valor numérico válido.';
+                }
+                return true;
+            }
+        }
+    ]);
 
+    const celsius = parseFloat(answers.celsius);
     const fahrenheit = (celsius * 9/5) + 32;
     let mensaje;
 
